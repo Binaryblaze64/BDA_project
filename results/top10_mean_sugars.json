@@ -1,0 +1,112 @@
+[
+  {
+    "category": "Sweets",
+    "products": 132312,
+    "sugar_observations": 74409,
+    "mean_sugars": 48.35569778047575,
+    "salt_observations": 67315,
+    "mean_salt": 0.21038871485051386,
+    "saturated_fat_observations": 73861,
+    "mean_saturated_fat": 4.447763037560624,
+    "mean_energy_kcal": 353.7261982539876
+  },
+  {
+    "category": "Dried fruits",
+    "products": 12773,
+    "sugar_observations": 9916,
+    "mean_sugars": 44.12012856579574,
+    "salt_observations": 8847,
+    "mean_salt": 0.2533814628160819,
+    "saturated_fat_observations": 9838,
+    "mean_saturated_fat": 4.762067151534186,
+    "mean_energy_kcal": 349.7787815569973
+  },
+  {
+    "category": "Chocolate products",
+    "products": 31176,
+    "sugar_observations": 25189,
+    "mean_sugars": 40.10385272555686,
+    "salt_observations": 24283,
+    "mean_salt": 0.1939775007424603,
+    "saturated_fat_observations": 25162,
+    "mean_saturated_fat": 20.52388627265005,
+    "mean_energy_kcal": 541.8542041368081
+  },
+  {
+    "category": "Biscuits and cakes",
+    "products": 115803,
+    "sugar_observations": 72813,
+    "mean_sugars": 28.345326573375967,
+    "salt_observations": 71226,
+    "mean_salt": 0.5938903658539684,
+    "saturated_fat_observations": 72702,
+    "mean_saturated_fat": 8.496552158868763,
+    "mean_energy_kcal": 427.97530869347423
+  },
+  {
+    "category": "Ice cream",
+    "products": 19436,
+    "sugar_observations": 14752,
+    "mean_sugars": 22.738466343276716,
+    "salt_observations": 13940,
+    "mean_salt": 0.22374048104085972,
+    "saturated_fat_observations": 14677,
+    "mean_saturated_fat": 6.59466549387598,
+    "mean_energy_kcal": 216.01023648920764
+  },
+  {
+    "category": "Fruits",
+    "products": 31379,
+    "sugar_observations": 17091,
+    "mean_sugars": 19.34105283205525,
+    "salt_observations": 15201,
+    "mean_salt": 0.1750451750632586,
+    "saturated_fat_observations": 16737,
+    "mean_saturated_fat": 0.7495492310764466,
+    "mean_energy_kcal": 113.62588624841283
+  },
+  {
+    "category": "Pastries",
+    "products": 14065,
+    "sugar_observations": 11361,
+    "mean_sugars": 18.486012847259744,
+    "salt_observations": 11216,
+    "mean_salt": 0.7801124237169338,
+    "saturated_fat_observations": 11366,
+    "mean_saturated_fat": 9.154642851273167,
+    "mean_energy_kcal": 373.2576009870592
+  },
+  {
+    "category": "Sweetened beverages",
+    "products": 39067,
+    "sugar_observations": 22075,
+    "mean_sugars": 17.33086308735895,
+    "salt_observations": 20732,
+    "mean_salt": 0.14824324585270107,
+    "saturated_fat_observations": 21180,
+    "mean_saturated_fat": 0.31112730696554947,
+    "mean_energy_kcal": 81.79006631308573
+  },
+  {
+    "category": "Baby milks",
+    "products": 905,
+    "sugar_observations": 794,
+    "mean_sugars": 16.584588907430614,
+    "salt_observations": 745,
+    "mean_salt": 0.9873018005148864,
+    "saturated_fat_observations": 806,
+    "mean_saturated_fat": 3.061247622934347,
+    "mean_energy_kcal": 214.83547106126738
+  },
+  {
+    "category": "Breakfast cereals",
+    "products": 25717,
+    "sugar_observations": 20701,
+    "mean_sugars": 15.3843113007411,
+    "salt_observations": 19795,
+    "mean_salt": 0.49796416693601026,
+    "saturated_fat_observations": 20537,
+    "mean_saturated_fat": 2.3358178019285045,
+    "mean_energy_kcal": 389.7360497908682
+  }
+]

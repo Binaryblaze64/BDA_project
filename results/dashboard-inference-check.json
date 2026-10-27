@@ -1,0 +1,27 @@
+{
+  "predictions": [
+    {
+      "grade": "A",
+      "probabilities": {
+        "A": 0.40407965235245596,
+        "B": 0.3120123547389889,
+        "C": 0.2659971474265307,
+        "D": 0.016125131196310215,
+        "E": 0.0017857142857142859
+      },
+      "cluster": 0
+    },
+    {
+      "grade": "E",
+      "probabilities": {
+        "A": 0.0007926529058962661,
+        "B": 0.0,
+        "C": 0.0,
+        "D": 0.01875191720980665,
+        "E": 0.9804554298842971
+      },
+      "cluster": 2
+    }
+  ],
+  "notice": "Model estimates, not official grades. Scores are uncalibrated model outputs."
+}

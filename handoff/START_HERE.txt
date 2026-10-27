@@ -1,0 +1,31 @@
+TEAMMATE HANDOFF - START HERE
+
+Your deliverable is components and a live demo, not a final report.
+This package contains the inputs your teammate needs to write their own report.
+The previously generated PDF is deliberately excluded.
+
+1. REPORT_INPUTS.txt: measured facts, methods, findings, caveats and file references.
+2. COMPONENT_INDEX.csv: inventory of code, tables, charts and execution evidence.
+3. LIVE_DEMO.txt: your five-minute speaking sequence and common questions.
+4. RECREATE.txt: how to reproduce the environment on another machine.
+5. SHA256SUMS.txt: integrity hashes for the component files.
+
+Project root:
+Live-Demo.ps1: guided demonstration using the already verified verification command.
+src/pipeline.py: full cleaning, SQL, classification and clustering implementation.
+compose.yaml and docker/: reproducible cluster configuration and submission scripts.
+results/: measured metrics, CSV tables, PNG charts, actual dashboard screenshots.
+logs/: logs of the completed full pipeline and infrastructure verification.
+SETUP.txt: existing detailed setup instructions.
+
+Important distinctions:
+- The full analysis completed successfully on two workers on 27 October 2026.
+- The PowerShell cluster-demo wrapper has been syntax-checked, not run end to end.
+- Saved-model reload and dashboard inference have now been runtime-tested.
+  The older optional CLI demonstration wrapper has not been run end to end.
+- Dataset, Docker images, trained model binaries and persistent HDFS volumes are NOT
+  included in this ZIP. They remain on the original computer. See RECREATE.txt.
+- Do not claim the short live verification retrains the full analysis.
+
+NEW: dashboard/ provides Food Atlas at http://localhost:8765.
+Read DASHBOARD.txt for the interactive demo and verified/untested boundaries.

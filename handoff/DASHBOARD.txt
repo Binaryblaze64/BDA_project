@@ -1,0 +1,63 @@
+FOOD ATLAS DASHBOARD - LIVE DEMO COMPONENT
+
+Open http://localhost:8765 on the original computer.
+Start it later from the project folder with:
+  .\Start-Dashboard.ps1
+or:
+  python dashboard/server.py
+Keep the terminal open; Ctrl+C stops the dashboard and its inference worker.
+Do not start a second copy if port 8765 is already in use.
+
+No new Python or JavaScript packages are required for the dashboard itself.
+The static interface uses bundled project files and makes no external network calls.
+Saved-analysis views work without Docker. Predictions require Docker Desktop, the
+three-node cluster, and the saved classifier/preprocessing/K-means artifacts in HDFS.
+Start the cluster separately with docker compose up -d if needed.
+
+FEATURES
+Overview: measured results, architecture, cluster profiles.
+Explore products: category/country filter, nutrient ranking, search, minimum count.
+Data quality: input/removed/retained counts, missingness and label availability.
+Model and errors: validation comparison, held-out per-class metrics, confusion matrix,
+feature importance, and 40 actual held-out errors (up to eight per true grade).
+Predict and compare: one or two user-entered nutrient profiles, estimated grades,
+class scores, cluster assignments and a B-minus-A nutrient comparison.
+
+DEMO SEQUENCE (approximately five minutes)
+1. Overview: describe the existing 4.5-million-record YARN run and 82.08% accuracy.
+2. Explore products: select salt, search a food category, then compare country tags.
+3. Data quality: explain why missing fiber does not mean zero fiber.
+4. Model and errors: select actual grade B and inspect misclassified products.
+5. Predict and compare: enter label values or use the illustrative defaults.
+   First prediction loads models and can take up to two minutes; warm it up before
+   the presentation. Later requests reuse the loaded models and normally take seconds.
+   Uncheck Compare with product B to predict one product.
+6. Show the original training job in Spark History to demonstrate YARN execution.
+
+INTERPRETATION
+Inputs are per 100 g; energy is kcal, other inputs are grams. All seven are required
+for the interactive tool so clustering has a complete profile. Saturated fat must
+not exceed fat; the gram nutrients checked must sum to at most 100.5 g (rounding).
+Predictions are model estimates, not official Nutri-Score grades. Class scores are
+uncalibrated and must not be presented as reliable confidence probabilities.
+Clusters describe similarity to exploratory nutrient profiles, not health rankings.
+Country results show the 100 largest saved country groups, not every country.
+
+EXECUTION
+Batch processing/training and error export run on Spark on YARN.
+Interactive inference uses a persistent local[1] Spark session in the existing
+master container, loading the same saved HDFS models without retraining. This
+latency-oriented inference path is separate from the demonstrated distributed run.
+The host server listens only on 127.0.0.1:8765; internal inference listens only on
+127.0.0.1:8790 inside the master container. No new Docker ports were exposed.
+Stop the dashboard before retraining to avoid competing for the master's memory.
+
+VERIFICATION
+Saved models reloaded on YARN and produced 40 error examples successfully.
+Backend unit checks: python -m unittest discover -s tests -v
+Real-model/API integration: python tests/check_dashboard_api.py
+Results: results/dashboard_checks.json. Logs: logs/dashboard-spark.log.
+Visual browser inspection was unavailable because Work browser access was disabled;
+rehearse the browser flow and review responsive layout before assessment.
+
+The new dashboard code and tests are in dashboard/ and tests/.

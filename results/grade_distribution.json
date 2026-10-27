@@ -1,0 +1,34 @@
+[
+  {
+    "grade": "unknown",
+    "count": 3010703
+  },
+  {
+    "grade": "e",
+    "count": 384359
+  },
+  {
+    "grade": "d",
+    "count": 344837
+  },
+  {
+    "grade": "c",
+    "count": 285619
+  },
+  {
+    "grade": "a",
+    "count": 200951
+  },
+  {
+    "grade": "b",
+    "count": 158620
+  },
+  {
+    "grade": "not-applicable",
+    "count": 100548
+  },
+  {
+    "grade": null,
+    "count": 44168
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "app": {
+    "id": "application_1793111996283_0003",
+    "user": "root",
+    "name": "BDA-Food-Nutrition-Full-Pipeline",
+    "queue": "root.default",
+    "state": "FINISHED",
+    "finalStatus": "SUCCEEDED",
+    "progress": 100.0,
+    "trackingUI": "History",
+    "trackingUrl": "http://master:8088/proxy/application_1793111996283_0003/",
+    "diagnostics": "",
+    "clusterId": 1793111996283,
+    "applicationType": "SPARK",
+    "applicationTags": "",
+    "priority": 0,
+    "startedTime": 1793112574155,
+    "launchTime": 1793112574755,
+    "finishedTime": 1793112807094,
+    "elapsedTime": 232939,
+    "amContainerLogs": "http://worker2:8042/node/containerlogs/container_1793111996283_0003_01_000001/root",
+    "amHostHttpAddress": "worker2:8042",
+    "masterNodeId": "worker2:45445",
+    "allocatedMB": -1,
+    "allocatedVCores": -1,
+    "reservedMB": -1,
+    "reservedVCores": -1,
+    "runningContainers": -1,
+    "memorySeconds": 751614,
+    "vcoreSeconds": 679,
+    "queueUsagePercentage": 0.0,
+    "clusterUsagePercentage": 0.0,
+    "resourceSecondsMap": {
+      "entry": {
+        "key": "vcores",
+        "value": "679"
+      }
+    },
+    "preemptedResourceMB": 0,
+    "preemptedResourceVCores": 0,
+    "numNonAMContainerPreempted": 0,
+    "numAMContainerPreempted": 0,
+    "preemptedMemorySeconds": 0,
+    "preemptedVcoreSeconds": 0,
+    "preemptedResourceSecondsMap": {},
+    "logAggregationStatus": "SUCCEEDED",
+    "unmanagedApplication": false,
+    "amNodeLabelExpression": "",
+    "timeouts": {
+      "timeout": [
+        {
+          "type": "LIFETIME",
+          "expiryTime": "UNLIMITED",
+          "remainingTimeInSeconds": -1
+        }
+      ]
+    }
+  }
+}

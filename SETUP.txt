@@ -1,0 +1,96 @@
+BDA PROJECT - THREE-NODE HADOOP / SPARK CLUSTER
+
+Run commands from D:\bda_project in PowerShell with Docker Desktop running.
+
+Software: Hadoop 3.4.3, Spark 3.5.9, Java 11, Python 3.10, NumPy 1.26.4.
+Docker image: bda-project:3.4.3-spark3.5.9
+
+Architecture:
+master: NameNode, ResourceManager, Spark History Server; Spark client driver during jobs.
+worker1 and worker2: each runs one DataNode and one NodeManager.
+Each worker offers YARN 2304 MB and 2 virtual cores. HDFS replication factor is 2.
+Container memory limits: master 1800 MB; each worker 2800 MB.
+All three nodes share this computer's physical resources.
+
+Start:
+docker compose up -d
+
+Stop while keeping HDFS data:
+docker compose stop
+
+Start again:
+docker compose start
+
+Wait for HDFS readiness after a restart:
+docker compose exec -T master hdfs dfsadmin -safemode wait
+
+Check workers:
+docker compose exec -T master hdfs dfsadmin -report
+docker compose exec -T master yarn node -list
+
+Dataset (already uploaded, original file unchanged):
+hdfs://master:9000/datasets/food/products_500mb_plus.tsv
+570666925 bytes; five blocks, two replicas per block.
+
+Check dataset health:
+docker compose exec -T master hdfs fsck /datasets/food/products_500mb_plus.tsv -files -blocks -locations
+
+Run the YARN verification (full dataset count and SQL summary, synthetic MLlib test):
+docker compose exec -T master bash /cluster/submit-verification.sh
+
+Web interfaces:
+HDFS: http://localhost:9870
+YARN: http://localhost:8088
+Spark completed-job history: http://localhost:18080
+Live Spark driver UI: http://localhost:4040 (only while a client job runs)
+Some Hadoop UI links use internal container hostnames; use the localhost URLs above.
+
+Persistence:
+HDFS data lives in Docker named volumes bda_master-data, bda_worker1-data,
+bda_worker2-data. Normal stop/start preserves it. Do not use docker compose down -v
+unless you intentionally want to delete the cluster's stored data.
+The project and original dataset are mounted read-only inside the master.
+No dataset downloads were performed.
+
+Files:
+compose.yaml: services, resources, localhost-only ports, storage.
+docker/conf/: Hadoop and YARN configuration.
+docker/start-cluster-node.sh: process startup and first-time NameNode format only.
+docker/submit-verification.sh: Spark YARN resource settings and submission.
+docker/verify_cluster.py: verification code.
+logs/cluster-verification.log: saved verification output.
+
+This is a local educational cluster with no authentication, exposed only on localhost.
+The full pipeline has been implemented and successfully run on YARN.
+
+FULL PIPELINE
+Run: docker compose exec -T master bash /cluster/run-pipeline.sh
+Export results: docker compose cp master:/data/results/. results
+Create charts: python src/make_charts.py (requires NumPy and matplotlib)
+Create report: python src/make_report.py (requires ReportLab)
+ReportLab is available in the Codex bundled Python runtime on this computer.
+
+Outputs: results/*.json, results/*.csv, results/charts/, results/screenshots/.
+Report: output/pdf/BDA_Project_Report.pdf (15 pages).
+Code: src/pipeline.py. Log: logs/pipeline.log.
+Saved cleaned data: hdfs://master:9000/processed/food_clean
+Saved models: hdfs://master:9000/models/
+
+Measured run: application_1793111996283_0003; YARN SUCCEEDED.
+Training 94,557; validation 94,848; test 189,100 products.
+Random forest test accuracy 0.8207985; weighted F1 0.8202296.
+K-means sample 17,899; selected k=4; silhouette 0.4795444.
+Model training uses a deterministic subset to fit laptop resources.
+
+Optional saved-model demonstration: docker compose exec -T master bash /cluster/predict.sh
+This optional demonstration script was created but NOT executed: the approval
+service reached the workspace spend cap. Main pipeline training/evaluation and
+model saving completed before that block.
+
+Rerunning overwrites the processed data and model paths from the previous run.
+The original dataset is never modified. See the report for methodology and limitations.
+
+DASHBOARD UPDATE
+Start: python dashboard/server.py; open http://localhost:8765.
+Saved model reload and interactive inference are now tested. The earlier spend-cap
+block no longer prevents these features. Read handoff/DASHBOARD.txt.

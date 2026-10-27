@@ -1,0 +1,21 @@
+PROJECT RUN COMPLETED - 27 OCTOBER 2026
+
+Read output/pdf/BDA_Project_Report.pdf first.
+Source: src/pipeline.py; cluster settings: compose.yaml and docker/.
+Run instructions: SETUP.txt.
+
+4,535,553 input products; 4,529,805 retained after cleaning.
+Random forest: accuracy 82.08%, weighted F1 0.8202 on 189,100 held-out products.
+K-means: k=4; silhouette 0.4795 on 17,899 complete-case sampled products.
+All dataset processing and model fitting ran through Spark on YARN.
+
+Tables/metrics: results/ (JSON and CSV).
+Figures: results/charts/; screenshots: results/screenshots/.
+Execution evidence: results/yarn_evidence.json, results/executor_evidence.json.
+Saved models and cleaned Parquet remain in HDFS persistent Docker volumes.
+This archive does not contain the dataset, Docker images, HDFS volumes, or model binaries.
+Rerun the pipeline with the original dataset and Docker environment to recreate models.
+
+Optional saved-model inference demo scripts are supplied but were not executed because
+workspace approval review reached its spend cap. The main pipeline succeeded and its
+model artifacts were verified to exist before that block.

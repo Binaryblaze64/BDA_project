@@ -1,0 +1,11 @@
+{
+  "cleaning_counts_reconcile": true,
+  "confusion_matrix_matches_test_metrics": true,
+  "cluster_sizes_reconcile": true,
+  "yarn_status": "SUCCEEDED",
+  "executor_hosts": [
+    "worker1:42185",
+    "worker2:37437"
+  ],
+  "saved_model_reload_test": "PASS: YARN error export and real-model dashboard predictions"
+}

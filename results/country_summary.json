@@ -1,0 +1,702 @@
+[
+  {
+    "country": "en:france",
+    "products": 1262459,
+    "mean_sugars": 13.648238061019903,
+    "mean_salt": 1.2431779519162722,
+    "mean_saturated_fat": 5.401790658147957
+  },
+  {
+    "country": "en:united-states",
+    "products": 909322,
+    "mean_sugars": 11.383862700727182,
+    "mean_salt": 1.259472281257309,
+    "mean_saturated_fat": 3.8883429633993005
+  },
+  {
+    "country": "en:germany",
+    "products": 408292,
+    "mean_sugars": 11.684945574090007,
+    "mean_salt": 1.4077675796887708,
+    "mean_saturated_fat": 4.873952394575526
+  },
+  {
+    "country": "en:spain",
+    "products": 353927,
+    "mean_sugars": 9.350697430637034,
+    "mean_salt": 1.3732058864734507,
+    "mean_saturated_fat": 5.461265756958455
+  },
+  {
+    "country": "en:italy",
+    "products": 266348,
+    "mean_sugars": 11.68185307472771,
+    "mean_salt": 1.3070900480062595,
+    "mean_saturated_fat": 4.951084984738468
+  },
+  {
+    "country": "en:united-kingdom",
+    "products": 186382,
+    "mean_sugars": 11.898089372118575,
+    "mean_salt": 1.1628221658062132,
+    "mean_saturated_fat": 4.520058177956515
+  },
+  {
+    "country": "en:canada",
+    "products": 120169,
+    "mean_sugars": 12.679933841824207,
+    "mean_salt": 1.2558690161655828,
+    "mean_saturated_fat": 4.4746169527881925
+  },
+  {
+    "country": "en:switzerland",
+    "products": 103454,
+    "mean_sugars": 11.801179631100736,
+    "mean_salt": 1.3800100679097886,
+    "mean_saturated_fat": 4.966475101064604
+  },
+  {
+    "country": "en:belgium",
+    "products": 100463,
+    "mean_sugars": 11.71494084440316,
+    "mean_salt": 1.1984310831159748,
+    "mean_saturated_fat": 4.922671422679597
+  },
+  {
+    "country": "en:ireland",
+    "products": 78419,
+    "mean_sugars": 9.229158736876993,
+    "mean_salt": 1.4619908504307313,
+    "mean_saturated_fat": 4.9061270255065415
+  },
+  {
+    "country": "en:netherlands",
+    "products": 75489,
+    "mean_sugars": 11.69465966499538,
+    "mean_salt": 1.2345051832660763,
+    "mean_saturated_fat": 4.5191785105842985
+  },
+  {
+    "country": "en:world",
+    "products": 73832,
+    "mean_sugars": 10.928964244188714,
+    "mean_salt": 0.9509618671101623,
+    "mean_saturated_fat": 4.194669589675688
+  },
+  {
+    "country": "en:australia",
+    "products": 73222,
+    "mean_sugars": 12.295212980373408,
+    "mean_salt": 1.3511335466000376,
+    "mean_saturated_fat": 4.8167437967236895
+  },
+  {
+    "country": "en:japan",
+    "products": 39393,
+    "mean_sugars": 18.062419547590128,
+    "mean_salt": 2.110117089789831,
+    "mean_saturated_fat": 4.308711372111852
+  },
+  {
+    "country": "en:romania",
+    "products": 37410,
+    "mean_sugars": 12.454660809719188,
+    "mean_salt": 1.132059265417532,
+    "mean_saturated_fat": 5.898401705778673
+  },
+  {
+    "country": "en:poland",
+    "products": 34589,
+    "mean_sugars": 11.130515252502027,
+    "mean_salt": 1.2776084626927287,
+    "mean_saturated_fat": 4.597711728979912
+  },
+  {
+    "country": "en:russia",
+    "products": 34415,
+    "mean_sugars": 16.896514947275282,
+    "mean_salt": 0.8389336089272001,
+    "mean_saturated_fat": 6.0880745303591235
+  },
+  {
+    "country": "en:brazil",
+    "products": 33894,
+    "mean_sugars": 12.789026986506794,
+    "mean_salt": 1.2026458790463534,
+    "mean_saturated_fat": 5.323273597976018
+  },
+  {
+    "country": "en:norway",
+    "products": 25532,
+    "mean_sugars": 11.899729180170427,
+    "mean_salt": 1.4357182238646657,
+    "mean_saturated_fat": 4.6102424360801955
+  },
+  {
+    "country": "en:sweden",
+    "products": 25128,
+    "mean_sugars": 9.52797717074598,
+    "mean_salt": 1.5175492727135307,
+    "mean_saturated_fat": 5.1315368008544935
+  },
+  {
+    "country": "en:morocco",
+    "products": 22209,
+    "mean_sugars": 18.62000896509029,
+    "mean_salt": 0.9361885060443178,
+    "mean_saturated_fat": 6.334592957264219
+  },
+  {
+    "country": "en:austria",
+    "products": 21536,
+    "mean_sugars": 11.046366506587226,
+    "mean_salt": 1.3111339784097307,
+    "mean_saturated_fat": 5.139977883897294
+  },
+  {
+    "country": "en:portugal",
+    "products": 21213,
+    "mean_sugars": 10.671479000784258,
+    "mean_salt": 1.1227705104837495,
+    "mean_saturated_fat": 4.759256134624464
+  },
+  {
+    "country": "en:india",
+    "products": 21142,
+    "mean_sugars": 14.264846309397738,
+    "mean_salt": 1.7685229425820974,
+    "mean_saturated_fat": 6.592167915604869
+  },
+  {
+    "country": "en:finland",
+    "products": 19321,
+    "mean_sugars": 13.199853966705632,
+    "mean_salt": 1.4041978484317594,
+    "mean_saturated_fat": 4.4766142284066754
+  },
+  {
+    "country": "en:czech-republic",
+    "products": 19082,
+    "mean_sugars": 14.169662689043074,
+    "mean_salt": 0.897246135143075,
+    "mean_saturated_fat": 4.980768669683531
+  },
+  {
+    "country": "en:denmark",
+    "products": 18889,
+    "mean_sugars": 13.06558659108047,
+    "mean_salt": 1.5620164802977738,
+    "mean_saturated_fat": 5.0018889027723015
+  },
+  {
+    "country": "en:mexico",
+    "products": 16723,
+    "mean_sugars": 11.301346680675005,
+    "mean_salt": 1.4325011156821696,
+    "mean_saturated_fat": 4.407981408808141
+  },
+  {
+    "country": "en:bulgaria",
+    "products": 16476,
+    "mean_sugars": 12.537126543828538,
+    "mean_salt": 1.024464655382531,
+    "mean_saturated_fat": 6.819852810257319
+  },
+  {
+    "country": "en:saudi-arabia",
+    "products": 15369,
+    "mean_sugars": 11.317829135526225,
+    "mean_salt": 0.9748049797509911,
+    "mean_saturated_fat": 4.674242169067262
+  },
+  {
+    "country": "en:argentina",
+    "products": 15223,
+    "mean_sugars": 15.882394111378103,
+    "mean_salt": 1.1303135261488855,
+    "mean_saturated_fat": 4.479925077167863
+  },
+  {
+    "country": "en:new-zealand",
+    "products": 14750,
+    "mean_sugars": 12.821119552037999,
+    "mean_salt": 1.2943405766451441,
+    "mean_saturated_fat": 4.6210195776153045
+  },
+  {
+    "country": "en:luxembourg",
+    "products": 11268,
+    "mean_sugars": 10.815816326432376,
+    "mean_salt": 0.9779280647460323,
+    "mean_saturated_fat": 4.529827172418086
+  },
+  {
+    "country": "en:greece",
+    "products": 11069,
+    "mean_sugars": 11.34840502488534,
+    "mean_salt": 0.9323954009912372,
+    "mean_saturated_fat": 5.16981103443883
+  },
+  {
+    "country": "en:hungary",
+    "products": 10701,
+    "mean_sugars": 12.07872043825145,
+    "mean_salt": 0.9673249798164726,
+    "mean_saturated_fat": 5.303312411874354
+  },
+  {
+    "country": "en:thailand",
+    "products": 10503,
+    "mean_sugars": 12.70950566640058,
+    "mean_salt": 1.2504995004128214,
+    "mean_saturated_fat": 4.567460876241857
+  },
+  {
+    "country": "en:lithuania",
+    "products": 10224,
+    "mean_sugars": 11.695294948518704,
+    "mean_salt": 1.0597086097499437,
+    "mean_saturated_fat": 4.7180460688284995
+  },
+  {
+    "country": "en:singapore",
+    "products": 10163,
+    "mean_sugars": 12.650189454750327,
+    "mean_salt": 1.068785446812194,
+    "mean_saturated_fat": 5.213826905048182
+  },
+  {
+    "country": "en:south-africa",
+    "products": 9645,
+    "mean_sugars": 12.673540061452005,
+    "mean_salt": 1.5764220550482542,
+    "mean_saturated_fat": 4.854533089469839
+  },
+  {
+    "country": "en:indonesia",
+    "products": 8180,
+    "mean_sugars": 16.0672650493599,
+    "mean_salt": 1.6175134116283763,
+    "mean_saturated_fat": 7.793808892920138
+  },
+  {
+    "country": "en:philippines",
+    "products": 8146,
+    "mean_sugars": 15.862017032215713,
+    "mean_salt": 1.6961357379709041,
+    "mean_saturated_fat": 7.358015038798451
+  },
+  {
+    "country": "en:turkey",
+    "products": 7873,
+    "mean_sugars": 16.07183817026779,
+    "mean_salt": 0.7191004474890343,
+    "mean_saturated_fat": 6.025543796845331
+  },
+  {
+    "country": "en:united-arab-emirates",
+    "products": 7793,
+    "mean_sugars": 10.143702073200902,
+    "mean_salt": 0.8971482544122794,
+    "mean_saturated_fat": 5.360699439458682
+  },
+  {
+    "country": "en:israel",
+    "products": 7463,
+    "mean_sugars": 12.243436167370408,
+    "mean_salt": 0.9498856417195529,
+    "mean_saturated_fat": 5.242166587164116
+  },
+  {
+    "country": "en:algeria",
+    "products": 7164,
+    "mean_sugars": 18.710918449475642,
+    "mean_salt": 0.8448116468220717,
+    "mean_saturated_fat": 5.218661783906224
+  },
+  {
+    "country": "en:croatia",
+    "products": 6878,
+    "mean_sugars": 11.823199693111363,
+    "mean_salt": 1.035366452666967,
+    "mean_saturated_fat": 4.9430495348007835
+  },
+  {
+    "country": "en:colombia",
+    "products": 6823,
+    "mean_sugars": 12.432696728177897,
+    "mean_salt": 0.9491852896577065,
+    "mean_saturated_fat": 4.802319467539839
+  },
+  {
+    "country": "en:slovakia",
+    "products": 6688,
+    "mean_sugars": 12.270468227934519,
+    "mean_salt": 1.094004053606746,
+    "mean_saturated_fat": 5.670354761978403
+  },
+  {
+    "country": "en:ukraine",
+    "products": 6453,
+    "mean_sugars": 15.275863906109514,
+    "mean_salt": 0.9682485407794179,
+    "mean_saturated_fat": 5.923779427775661
+  },
+  {
+    "country": "en:chile",
+    "products": 6384,
+    "mean_sugars": 11.479454962571078,
+    "mean_salt": 1.7218816240510488,
+    "mean_saturated_fat": 4.860772928019793
+  },
+  {
+    "country": "en:qatar",
+    "products": 6203,
+    "mean_sugars": 15.39551959911632,
+    "mean_salt": 0.8728061342604055,
+    "mean_saturated_fat": 6.349355026649517
+  },
+  {
+    "country": "en:iraq",
+    "products": 5758,
+    "mean_sugars": 11.730546453051323,
+    "mean_salt": 1.4266217885935137,
+    "mean_saturated_fat": 9.066101730076253
+  },
+  {
+    "country": "en:estonia",
+    "products": 5712,
+    "mean_sugars": 12.330441859996098,
+    "mean_salt": 1.2887813075596004,
+    "mean_saturated_fat": 4.635170599496797
+  },
+  {
+    "country": "en:malaysia",
+    "products": 5377,
+    "mean_sugars": 13.359251210322306,
+    "mean_salt": 1.6282899468909406,
+    "mean_saturated_fat": 7.231442559075099
+  },
+  {
+    "country": "en:hong-kong",
+    "products": 4923,
+    "mean_sugars": 11.53407867075176,
+    "mean_salt": 1.3436866185058207,
+    "mean_saturated_fat": 4.767946294004115
+  },
+  {
+    "country": "en:serbia",
+    "products": 4615,
+    "mean_sugars": 12.654614120905599,
+    "mean_salt": 1.1192809948990297,
+    "mean_saturated_fat": 5.155667483121513
+  },
+  {
+    "country": "en:reunion",
+    "products": 4607,
+    "mean_sugars": 13.392352499050478,
+    "mean_salt": 1.1384203232240724,
+    "mean_saturated_fat": 4.541840549746904
+  },
+  {
+    "country": "en:latvia",
+    "products": 4385,
+    "mean_sugars": 11.368991958685596,
+    "mean_salt": 0.9540162676772013,
+    "mean_saturated_fat": 4.471539600892987
+  },
+  {
+    "country": "en:bolivia",
+    "products": 4321,
+    "mean_sugars": 17.267492477504227,
+    "mean_salt": 1.5208120655751427,
+    "mean_saturated_fat": 5.372065790479782
+  },
+  {
+    "country": "en:slovenia",
+    "products": 3994,
+    "mean_sugars": 11.95201924938521,
+    "mean_salt": 0.6995513088544999,
+    "mean_saturated_fat": 4.699186513130798
+  },
+  {
+    "country": "en:egypt",
+    "products": 3826,
+    "mean_sugars": 14.023560784793467,
+    "mean_salt": 0.7052191979288216,
+    "mean_saturated_fat": 5.575549053517355
+  },
+  {
+    "country": "en:tunisia",
+    "products": 3724,
+    "mean_sugars": 15.73219643037815,
+    "mean_salt": 0.6333466244997003,
+    "mean_saturated_fat": 4.929799340732427
+  },
+  {
+    "country": "en:lebanon",
+    "products": 3709,
+    "mean_sugars": 11.987121825168627,
+    "mean_salt": 1.3069455933945149,
+    "mean_saturated_fat": 6.424432379485361
+  },
+  {
+    "country": "en:south-korea",
+    "products": 2948,
+    "mean_sugars": 9.622450029766052,
+    "mean_salt": 1.1300216003511183,
+    "mean_saturated_fat": 4.008553815282597
+  },
+  {
+    "country": "en:puerto-rico",
+    "products": 2906,
+    "mean_sugars": 11.427020543280017,
+    "mean_salt": 1.0644615958694392,
+    "mean_saturated_fat": 4.346735365110921
+  },
+  {
+    "country": "en:kuwait",
+    "products": 2904,
+    "mean_sugars": 12.270805370515879,
+    "mean_salt": 1.5598555950999,
+    "mean_saturated_fat": 4.8687424368586125
+  },
+  {
+    "country": "en:iceland",
+    "products": 2723,
+    "mean_sugars": 9.988440422484535,
+    "mean_salt": 1.3369663483976202,
+    "mean_saturated_fat": 4.699117196975544
+  },
+  {
+    "country": "en:taiwan",
+    "products": 2707,
+    "mean_sugars": 10.835571127199081,
+    "mean_salt": 1.720458237941122,
+    "mean_saturated_fat": 4.294818365381365
+  },
+  {
+    "country": "en:peru",
+    "products": 2636,
+    "mean_sugars": 18.124536778052274,
+    "mean_salt": 1.4522404248222267,
+    "mean_saturated_fat": 5.248356569901985
+  },
+  {
+    "country": "en:costa-rica",
+    "products": 2558,
+    "mean_sugars": 15.276626800907135,
+    "mean_salt": 1.5538542791725813,
+    "mean_saturated_fat": 5.084155138547821
+  },
+  {
+    "country": "en:new-caledonia",
+    "products": 2490,
+    "mean_sugars": 13.909727617280717,
+    "mean_salt": 1.7494416509728405,
+    "mean_saturated_fat": 4.937194896694176
+  },
+  {
+    "country": "en:cyprus",
+    "products": 2464,
+    "mean_sugars": 9.51800766479242,
+    "mean_salt": 1.6290637816476954,
+    "mean_saturated_fat": 4.453817299825984
+  },
+  {
+    "country": "en:ecuador",
+    "products": 2136,
+    "mean_sugars": 15.037536541481971,
+    "mean_salt": 1.113804388110276,
+    "mean_saturated_fat": 5.040784763006285
+  },
+  {
+    "country": "en:georgia",
+    "products": 2132,
+    "mean_sugars": 13.440813171820803,
+    "mean_salt": 1.4331547587761333,
+    "mean_saturated_fat": 5.6023956255293905
+  },
+  {
+    "country": "en:malta",
+    "products": 2055,
+    "mean_sugars": 9.061436863397327,
+    "mean_salt": 1.082351503990469,
+    "mean_saturated_fat": 4.358890276872672
+  },
+  {
+    "country": "en:panama",
+    "products": 1968,
+    "mean_sugars": 13.401055614315034,
+    "mean_salt": 1.0984696547418307,
+    "mean_saturated_fat": 5.011044483883379
+  },
+  {
+    "country": "en:uruguay",
+    "products": 1878,
+    "mean_sugars": 24.079002072217428,
+    "mean_salt": 1.3048952198272779,
+    "mean_saturated_fat": 6.17961219911165
+  },
+  {
+    "country": "en:french-polynesia",
+    "products": 1847,
+    "mean_sugars": 14.257010017534578,
+    "mean_salt": 1.1902940565294635,
+    "mean_saturated_fat": 4.890656737780991
+  },
+  {
+    "country": "en:guadeloupe",
+    "products": 1821,
+    "mean_sugars": 13.099886954952218,
+    "mean_salt": 0.9779021544195128,
+    "mean_saturated_fat": 3.310451302117603
+  },
+  {
+    "country": "en:moldova",
+    "products": 1719,
+    "mean_sugars": 13.684827015107107,
+    "mean_salt": 1.2760045095784525,
+    "mean_saturated_fat": 5.879744323214933
+  },
+  {
+    "country": "en:dominican-republic",
+    "products": 1650,
+    "mean_sugars": 12.70267163141359,
+    "mean_salt": 1.1634137444888337,
+    "mean_saturated_fat": 3.9686742133147273
+  },
+  {
+    "country": "en:china",
+    "products": 1603,
+    "mean_sugars": 13.416156878181877,
+    "mean_salt": 2.3159221160752774,
+    "mean_saturated_fat": 4.681456977550575
+  },
+  {
+    "country": "en:venezuela",
+    "products": 1598,
+    "mean_sugars": 22.23377626630463,
+    "mean_salt": 1.1948111438141609,
+    "mean_saturated_fat": 6.177659205545955
+  },
+  {
+    "country": "en:pakistan",
+    "products": 1596,
+    "mean_sugars": 18.837927783735214,
+    "mean_salt": 2.537430389753075,
+    "mean_saturated_fat": 7.773397186542641
+  },
+  {
+    "country": "en:nicaragua",
+    "products": 1586,
+    "mean_sugars": 17.33900943468769,
+    "mean_salt": 1.8117180290902533,
+    "mean_saturated_fat": 5.757971412968551
+  },
+  {
+    "country": "en:uzbekistan",
+    "products": 1570,
+    "mean_sugars": 22.25842314715577,
+    "mean_salt": 0.622367480543449,
+    "mean_saturated_fat": 9.662475451719152
+  },
+  {
+    "country": "en:cuba",
+    "products": 1470,
+    "mean_sugars": 9.09363487720175,
+    "mean_salt": 0.9900549372295384,
+    "mean_saturated_fat": 4.258004499396306
+  },
+  {
+    "country": "en:vietnam",
+    "products": 1412,
+    "mean_sugars": 14.548307530903857,
+    "mean_salt": 0.8527209307722426,
+    "mean_saturated_fat": 4.789249261456144
+  },
+  {
+    "country": "en:bosnia-and-herzegovina",
+    "products": 1340,
+    "mean_sugars": 13.317698773873188,
+    "mean_salt": 0.6180286904014294,
+    "mean_saturated_fat": 4.703048106333406
+  },
+  {
+    "country": "en:paraguay",
+    "products": 1337,
+    "mean_sugars": 22.293825402478856,
+    "mean_salt": 1.0352227054612908,
+    "mean_saturated_fat": 5.950621618784327
+  },
+  {
+    "country": "en:mauritius",
+    "products": 1328,
+    "mean_sugars": 13.01016475365415,
+    "mean_salt": 0.9332481949537615,
+    "mean_saturated_fat": 4.710535201014633
+  },
+  {
+    "country": "en:senegal",
+    "products": 1317,
+    "mean_sugars": 13.595733123392485,
+    "mean_salt": 0.7462252134363118,
+    "mean_saturated_fat": 4.24328825021331
+  },
+  {
+    "country": "en:belarus",
+    "products": 1311,
+    "mean_sugars": 15.5898018524695,
+    "mean_salt": 0.696073993935474,
+    "mean_saturated_fat": 5.473805339387711
+  },
+  {
+    "country": "en:north-macedonia",
+    "products": 1304,
+    "mean_sugars": 16.068348274367715,
+    "mean_salt": 1.1149791931935784,
+    "mean_saturated_fat": 6.644790100441425
+  },
+  {
+    "country": "en:honduras",
+    "products": 1285,
+    "mean_sugars": 17.00694048889316,
+    "mean_salt": 1.4706242488710246,
+    "mean_saturated_fat": 5.558061793873452
+  },
+  {
+    "country": "en:el-salvador",
+    "products": 1269,
+    "mean_sugars": 12.837298294077595,
+    "mean_salt": 2.103715960125528,
+    "mean_saturated_fat": 4.683155702935226
+  },
+  {
+    "country": "en:martinique",
+    "products": 1259,
+    "mean_sugars": 12.23276650140523,
+    "mean_salt": 1.0685778106106316,
+    "mean_saturated_fat": 4.41648299361705
+  },
+  {
+    "country": "en:azerbaijan",
+    "products": 1194,
+    "mean_sugars": 12.276538461538463,
+    "mean_salt": 0.5205978260869565,
+    "mean_saturated_fat": 5.114074074074074
+  },
+  {
+    "country": "en:cambodia",
+    "products": 1176,
+    "mean_sugars": 15.298026733928403,
+    "mean_salt": 0.5799564658588119,
+    "mean_saturated_fat": 4.398431085859541
+  },
+  {
+    "country": "en:virgin-islands-of-the-united-states",
+    "products": 1169,
+    "mean_sugars": 17.127974574445165,
+    "mean_salt": 0.901288606304182,
+    "mean_saturated_fat": 6.738732448107453
+  }
+]

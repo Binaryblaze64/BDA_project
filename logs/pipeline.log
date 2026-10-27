@@ -1,0 +1,302 @@
+Safe mode is OFF
+26/10/27 14:49:24 INFO SparkContext: Running Spark version 3.5.9
+26/10/27 14:49:24 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+26/10/27 14:49:24 INFO SparkContext: Java version 11.0.28
+26/10/27 14:49:24 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/27 14:49:24 INFO ResourceUtils: ==============================================================
+26/10/27 14:49:24 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/10/27 14:49:24 INFO ResourceUtils: ==============================================================
+26/10/27 14:49:24 INFO SparkContext: Submitted application: BDA-Food-Nutrition-Full-Pipeline
+26/10/27 14:49:24 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(memoryOverhead -> name: memoryOverhead, amount: 384, script: , vendor: , cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 768, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/10/27 14:49:24 INFO ResourceProfile: Limiting resource is cpus at 1 tasks per executor
+26/10/27 14:49:24 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/10/27 14:49:24 INFO SecurityManager: Changing view acls to: root
+26/10/27 14:49:24 INFO SecurityManager: Changing modify acls to: root
+26/10/27 14:49:24 INFO SecurityManager: Changing view acls groups to: 
+26/10/27 14:49:24 INFO SecurityManager: Changing modify acls groups to: 
+26/10/27 14:49:24 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root; groups with view permissions: EMPTY; users with modify permissions: root; groups with modify permissions: EMPTY
+26/10/27 14:49:24 INFO Utils: Successfully started service 'sparkDriver' on port 34711.
+26/10/27 14:49:24 INFO SparkEnv: Registering MapOutputTracker
+26/10/27 14:49:24 INFO SparkEnv: Registering BlockManagerMaster
+26/10/27 14:49:24 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/10/27 14:49:24 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/10/27 14:49:24 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/10/27 14:49:24 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-3d1bd240-0e33-409e-a88e-7b2ed58454b0
+26/10/27 14:49:24 INFO MemoryStore: MemoryStore started with capacity 127.2 MiB
+26/10/27 14:49:25 INFO SparkEnv: Registering OutputCommitCoordinator
+26/10/27 14:49:25 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/10/27 14:49:25 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/10/27 14:49:25 INFO DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at master/172.19.0.2:8032
+26/10/27 14:49:26 INFO Configuration: resource-types.xml not found
+26/10/27 14:49:26 INFO ResourceUtils: Unable to find 'resource-types.xml'.
+26/10/27 14:49:26 INFO Client: Verifying our application has not requested more than the maximum memory capability of the cluster (2304 MB per container)
+26/10/27 14:49:26 INFO Client: Will allocate AM container, with 768 MB memory including 256 MB overhead
+26/10/27 14:49:26 INFO Client: Setting up container launch context for our AM
+26/10/27 14:49:26 INFO Client: Setting up the launch environment for our AM container
+26/10/27 14:49:26 INFO Client: Preparing resources for our AM container
+26/10/27 14:49:26 WARN Client: Neither spark.yarn.jars nor spark.yarn.archive is set, falling back to uploading libraries under SPARK_HOME.
+26/10/27 14:49:30 INFO Client: Uploading resource file:/tmp/spark-188a4ad0-b417-4a0b-b82d-1a14ef060654/__spark_libs__3307372857999406273.zip -> hdfs://master:9000/user/root/.sparkStaging/application_1793111996283_0003/__spark_libs__3307372857999406273.zip
+26/10/27 14:49:33 INFO Client: Uploading resource file:/opt/spark/python/lib/pyspark.zip -> hdfs://master:9000/user/root/.sparkStaging/application_1793111996283_0003/pyspark.zip
+26/10/27 14:49:33 INFO Client: Uploading resource file:/opt/spark/python/lib/py4j-0.10.9.7-src.zip -> hdfs://master:9000/user/root/.sparkStaging/application_1793111996283_0003/py4j-0.10.9.7-src.zip
+26/10/27 14:49:33 INFO Client: Uploading resource file:/tmp/spark-188a4ad0-b417-4a0b-b82d-1a14ef060654/__spark_conf__15958280008687828126.zip -> hdfs://master:9000/user/root/.sparkStaging/application_1793111996283_0003/__spark_conf__.zip
+26/10/27 14:49:33 INFO SecurityManager: Changing view acls to: root
+26/10/27 14:49:33 INFO SecurityManager: Changing modify acls to: root
+26/10/27 14:49:33 INFO SecurityManager: Changing view acls groups to: 
+26/10/27 14:49:33 INFO SecurityManager: Changing modify acls groups to: 
+26/10/27 14:49:33 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root; groups with view permissions: EMPTY; users with modify permissions: root; groups with modify permissions: EMPTY
+26/10/27 14:49:33 INFO Client: Submitting application application_1793111996283_0003 to ResourceManager
+26/10/27 14:49:34 INFO YarnClientImpl: Submitted application application_1793111996283_0003
+26/10/27 14:49:35 INFO Client: Application report for application_1793111996283_0003 (state: ACCEPTED)
+26/10/27 14:49:35 INFO Client: 
+	 client token: N/A
+	 diagnostics: AM container is launched, waiting for AM container to Register with RM
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: root.default
+	 start time: 1793112574155
+	 final status: UNDEFINED
+	 tracking URL: http://master:8088/proxy/application_1793111996283_0003/
+	 user: root
+26/10/27 14:49:42 INFO Client: Application report for application_1793111996283_0003 (state: RUNNING)
+26/10/27 14:49:42 INFO Client: 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: 172.19.0.4
+	 ApplicationMaster RPC port: -1
+	 queue: root.default
+	 start time: 1793112574155
+	 final status: UNDEFINED
+	 tracking URL: http://master:8088/proxy/application_1793111996283_0003/
+	 user: root
+26/10/27 14:49:42 INFO YarnClientSchedulerBackend: Application application_1793111996283_0003 has started running.
+26/10/27 14:49:42 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39451.
+26/10/27 14:49:42 INFO NettyBlockTransferService: Server created on master 0.0.0.0:39451
+26/10/27 14:49:42 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/10/27 14:49:42 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, master, 39451, None)
+26/10/27 14:49:42 INFO BlockManagerMasterEndpoint: Registering block manager master:39451 with 127.2 MiB RAM, BlockManagerId(driver, master, 39451, None)
+26/10/27 14:49:42 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, master, 39451, None)
+26/10/27 14:49:42 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, master, 39451, None)
+26/10/27 14:49:42 INFO YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> master, PROXY_URI_BASES -> http://master:8088/proxy/application_1793111996283_0003), /proxy/application_1793111996283_0003
+26/10/27 14:49:42 INFO SingleEventLogFileWriter: Logging events to hdfs://master:9000/spark-events/application_1793111996283_0003.inprogress
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /jobs: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /jobs/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /jobs/job: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /jobs/job/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /stages: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /stages/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /stages/stage: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /stages/stage/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /stages/pool: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /stages/pool/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /storage: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /storage/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /storage/rdd: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /storage/rdd/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /environment: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /environment/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /executors: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /executors/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /executors/threadDump: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /executors/threadDump/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /executors/heapHistogram: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /executors/heapHistogram/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /static: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /api: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /jobs/job/kill: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /stages/stage/kill: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO ServerInfo: Adding filter to /metrics/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+26/10/27 14:49:43 INFO YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark-client://YarnAM)
+26/10/27 14:49:50 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.19.0.4:56432) with ID 1,  ResourceProfileId 0
+26/10/27 14:49:50 INFO BlockManagerMasterEndpoint: Registering block manager worker2:37437 with 280.8 MiB RAM, BlockManagerId(1, worker2, 37437, None)
+26/10/27 14:49:55 INFO YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after waiting maxRegisteredResourcesWaitingTime: 30000000000(ns)
+26/10/27 14:50:22 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+STAGE: cleaning complete
+STAGE: SQL analysis complete
+STAGE: training logistic_regression
+26/10/27 14:51:50 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.JNIBLAS
+STAGE: training random_forest
+26/10/27 14:52:03 WARN DAGScheduler: Broadcasting large task binary with size 1055.8 KiB
+26/10/27 14:52:05 WARN DAGScheduler: Broadcasting large task binary with size 1896.6 KiB
+26/10/27 14:52:07 WARN DAGScheduler: Broadcasting large task binary with size 3.3 MiB
+26/10/27 14:52:11 WARN DAGScheduler: Broadcasting large task binary with size 5.8 MiB
+26/10/27 14:52:14 WARN DAGScheduler: Broadcasting large task binary with size 1398.4 KiB
+26/10/27 14:52:16 WARN DAGScheduler: Broadcasting large task binary with size 9.7 MiB
+26/10/27 14:52:21 WARN DAGScheduler: Broadcasting large task binary with size 2.1 MiB
+26/10/27 14:52:24 WARN DAGScheduler: Broadcasting large task binary with size 15.5 MiB
+26/10/27 14:52:30 WARN DAGScheduler: Broadcasting large task binary with size 2.9 MiB
+26/10/27 14:52:34 WARN DAGScheduler: Broadcasting large task binary with size 11.4 MiB
+26/10/27 14:52:37 WARN DAGScheduler: Broadcasting large task binary with size 11.5 MiB
+26/10/27 14:52:38 WARN DAGScheduler: Broadcasting large task binary with size 11.5 MiB
+26/10/27 14:52:39 WARN DAGScheduler: Broadcasting large task binary with size 11.5 MiB
+26/10/27 14:52:40 WARN DAGScheduler: Broadcasting large task binary with size 11.5 MiB
+26/10/27 14:52:42 WARN DAGScheduler: Broadcasting large task binary with size 11.4 MiB
+26/10/27 14:52:47 WARN DAGScheduler: Broadcasting large task binary with size 11.5 MiB
+26/10/27 14:52:48 WARN DAGScheduler: Broadcasting large task binary with size 11.5 MiB
+26/10/27 14:52:49 WARN DAGScheduler: Broadcasting large task binary with size 11.5 MiB
+26/10/27 14:52:51 WARN DAGScheduler: Broadcasting large task binary with size 11.5 MiB
+26/10/27 14:52:54 WARN DAGScheduler: Broadcasting large task binary with size 11.5 MiB
+26/10/27 14:52:56 WARN DAGScheduler: Broadcasting large task binary with size 11.5 MiB
+26/10/27 14:52:56 WARN DAGScheduler: Broadcasting large task binary with size 11.5 MiB
+26/10/27 14:52:57 WARN DAGScheduler: Broadcasting large task binary with size 11.5 MiB
+26/10/27 14:53:00 WARN TaskSetManager: Stage 357 contains a task of very large size (5823 KiB). The maximum recommended task size is 1000 KiB.
+STAGE: classification complete
+STAGE: clustering k=3
+STAGE: clustering k=4
+STAGE: clustering k=5
+STAGE: COMPLETE
+{
+  "application_id": "application_1793111996283_0003",
+  "spark_version": "3.5.9",
+  "input": "hdfs://master:9000/datasets/food/products_500mb_plus.tsv",
+  "seed": 42,
+  "raw_rows": 4535553,
+  "invalid_values_by_feature": {
+    "energy_kcal": 3935,
+    "fat": 406,
+    "saturated_fat": 166,
+    "sugars": 309,
+    "fiber": 276,
+    "proteins": 290,
+    "salt": 1042
+  },
+  "missing_code_rows": 0,
+  "deduplicated_rows": 4535493,
+  "duplicate_rows_removed": 60,
+  "clean_rows": 4529805,
+  "invalid_rows_removed": 5688,
+  "missing_before": {
+    "energy_kcal": 2298952,
+    "fat": 2322699,
+    "saturated_fat": 2405872,
+    "sugars": 2389692,
+    "fiber": 3501980,
+    "proteins": 2319006,
+    "salt": 2582159
+  },
+  "missing_after": {
+    "energy_kcal": 2298852,
+    "fat": 2322479,
+    "saturated_fat": 2405269,
+    "sugars": 2389127,
+    "fiber": 3499144,
+    "proteins": 2318749,
+    "salt": 2581270
+  },
+  "stage": "COMPLETE",
+  "elapsed_seconds": 209.4,
+  "model_rows": {
+    "eligible": 945826,
+    "train": 94557,
+    "validation": 94848,
+    "test": 189100
+  },
+  "model_class_counts": {
+    "train": [
+      {
+        "grade": "a",
+        "count": 13501
+      },
+      {
+        "grade": "b",
+        "count": 11025
+      },
+      {
+        "grade": "c",
+        "count": 21031
+      },
+      {
+        "grade": "d",
+        "count": 24261
+      },
+      {
+        "grade": "e",
+        "count": 24739
+      }
+    ],
+    "validation": [
+      {
+        "grade": "a",
+        "count": 13609
+      },
+      {
+        "grade": "b",
+        "count": 11185
+      },
+      {
+        "grade": "c",
+        "count": 20840
+      },
+      {
+        "grade": "d",
+        "count": 24247
+      },
+      {
+        "grade": "e",
+        "count": 24967
+      }
+    ],
+    "test": [
+      {
+        "grade": "a",
+        "count": 27389
+      },
+      {
+        "grade": "b",
+        "count": 22000
+      },
+      {
+        "grade": "c",
+        "count": 41476
+      },
+      {
+        "grade": "d",
+        "count": 48803
+      },
+      {
+        "grade": "e",
+        "count": 49432
+      }
+    ]
+  },
+  "training_policy": "Product-code hash: 0-9 training, 10-19 validation, 80-99 held-out test; at least 3 of 7 nutrients observed. Median imputation fitted on training only.",
+  "selected_model": "random_forest",
+  "validation_metrics": {
+    "logistic_regression": {
+      "accuracy": 0.5596955128205128,
+      "f1": 0.5248814247183209,
+      "weightedPrecision": 0.5868910455208047,
+      "weightedRecall": 0.5596955128205128
+    },
+    "random_forest": {
+      "accuracy": 0.8189946018893387,
+      "f1": 0.8183686578786222,
+      "weightedPrecision": 0.8184966434655109,
+      "weightedRecall": 0.8189946018893388
+    }
+  },
+  "test_metrics": {
+    "accuracy": 0.8207985193019567,
+    "f1": 0.8202296002844742,
+    "weightedPrecision": 0.8202949516832709,
+    "weightedRecall": 0.8207985193019567
+  },
+  "target_080_met": true,
+  "majority_baseline_test": {
+    "accuracy": 0.26140666314119515,
+    "f1": 0.10834482729692921,
+    "weightedPrecision": 0.06833344353461428,
+    "weightedRecall": 0.26140666314119515
+  },
+  "clustering_sample_rows": 17899,
+  "clustering": {
+    "selected_k": 4,
+    "silhouette_scores": {
+      "3": 0.4295669649196378,
+      "4": 0.47954444029109916,
+      "5": 0.4631064271653101
+    },
+    "distance": "squaredEuclidean",
+    "sample_policy": "2% hash sample of complete cases; standardized nutrient features"
+  }
+}

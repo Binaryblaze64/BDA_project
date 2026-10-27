@@ -1,0 +1,63 @@
+LIVE DEMO - PRESENTER GUIDE
+
+Before presentation:
+Start Docker Desktop. Close memory-heavy apps. Keep this project's folder intact.
+From PowerShell in D:\bda_project run:
+  .\Live-Demo.ps1
+If your computer's execution policy blocks scripts, use the individual Docker
+commands below instead of changing machine-wide policy.
+
+The wrapper pauses between steps. It does not open browser tabs automatically.
+Keep these tabs ready: localhost:9870, localhost:8088, localhost:18080.
+Open localhost:4040 while the verification job is running.
+
+0:00-1:00 Architecture and HDFS
+Say: This is three Docker nodes on one physical computer. One master runs the
+NameNode and ResourceManager; two workers run DataNodes and NodeManagers.
+Replication factor two means two copies for storage redundancy, not extra records.
+Show: results/charts/architecture.png and HDFS Live Nodes = 2.
+Commands:
+  docker compose up -d
+  docker compose exec -T master hdfs dfsadmin -report
+  docker compose exec -T master hdfs dfs -ls -h /datasets/food
+
+1:00-2:30 Live distributed execution
+Show two RUNNING NodeManagers, then launch the verification job:
+  docker compose exec -T master yarn node -list
+  docker compose exec -T master bash /cluster/submit-verification.sh
+Watch the new application in YARN. The duration is variable; rehearse once.
+Say: This live check reads the actual dataset from HDFS, counts it, produces a
+Nutri-Score SQL summary, and runs a small synthetic K-means check.
+It is a runtime check, not the full model-training experiment.
+
+2:30-3:30 Execution proof
+After completion show YARN SUCCEEDED. In Spark History open the full pipeline:
+application_1793111996283_0003. Show Executors and tasks on both workers.
+The main completed pipeline took about four minutes; retraining is optional:
+  docker compose exec -T master bash /cluster/run-pipeline.sh
+That command overwrites saved project models and processed outputs.
+
+3:30-5:00 Actual results and interpretation
+Show confusion.png, importance.png, clusters.png and silhouette.png.
+Say: Random forest accuracy 82.08%, weighted F1 0.8202 on 189,100 held-out products.
+Training used 94,557 products for laptop resource limits. SQL used all cleaned rows.
+Grade B has weaker F1 (~0.643), so overall accuracy does not mean equal performance.
+Four exploratory clusters were selected, silhouette 0.4795 on 17,899 complete cases.
+Do not call the model an official Nutri-Score calculator.
+
+Optional saved-model demo:
+  .\Live-Demo.ps1 -PredictionDemo
+This path is NOT yet runtime-tested. Rehearse before relying on it in assessment.
+It loads saved models and generates 100 predictions without retraining.
+
+Common questions:
+Why YARN? It schedules executor resources across NodeManagers.
+Why HDFS? Distributed storage with replicated blocks; Spark reads the HDFS URI.
+Why imputation? Many nutrients are missing; medians are learned on training only.
+Why not use nutriscore_score? It leaks the answer into the prediction inputs.
+Why scaling? Important for logistic regression and K-means distance geometry.
+Does this prove multi-machine speedup? No: the nodes share one physical host.
+Are country counts additive? No: one product can be tagged for multiple countries.
+
+After the demo: docker compose stop preserves HDFS data.
+Never use docker compose down -v unless you intend to delete persisted data.

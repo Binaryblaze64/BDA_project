@@ -1,0 +1,30 @@
+[
+  {
+    "feature": "energy_kcal",
+    "importance": 0.11285735879514633
+  },
+  {
+    "feature": "fat",
+    "importance": 0.09172538195698073
+  },
+  {
+    "feature": "saturated_fat",
+    "importance": 0.1639827535707885
+  },
+  {
+    "feature": "sugars",
+    "importance": 0.1925690271526311
+  },
+  {
+    "feature": "fiber",
+    "importance": 0.06044859404829932
+  },
+  {
+    "feature": "proteins",
+    "importance": 0.11279077324877285
+  },
+  {
+    "feature": "salt",
+    "importance": 0.2656261112273811
+  }
+]

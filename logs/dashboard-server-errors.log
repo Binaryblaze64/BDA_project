@@ -1,0 +1,11 @@
+127.0.0.1 - - [27/Oct/2026 21:26:58] "POST /api/predict HTTP/1.1" 200 -
+127.0.0.1 - - [27/Oct/2026 21:28:23] "GET /api/data HTTP/1.1" 200 -
+127.0.0.1 - - [27/Oct/2026 21:28:26] "POST /api/predict HTTP/1.1" 200 -
+127.0.0.1 - - [27/Oct/2026 21:28:31] "POST /api/predict HTTP/1.1" 200 -
+127.0.0.1 - - [27/Oct/2026 21:28:33] "POST /api/predict HTTP/1.1" 400 -
+127.0.0.1 - - [27/Oct/2026 21:28:35] "POST /api/predict HTTP/1.1" 400 -
+127.0.0.1 - - [27/Oct/2026 21:28:37] "POST /api/predict HTTP/1.1" 403 -
+127.0.0.1 - - [27/Oct/2026 21:28:39] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [27/Oct/2026 21:30:03] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Oct/2026 21:30:05] "GET /app.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Oct/2026 21:30:07] "GET /style.css HTTP/1.1" 200 -

@@ -1,0 +1,48 @@
+name: bda
+x-node: &node
+  image: bda-project:3.4.3-spark3.5.9
+  entrypoint: ["/bin/bash", "/cluster/start-cluster-node.sh"]
+  restart: unless-stopped
+  environment:
+    HADOOP_HEAPSIZE: "256"
+  networks: [cluster]
+services:
+  master:
+    <<: *node
+    hostname: master
+    command: [master]
+    mem_limit: 1800m
+    ports:
+      - "127.0.0.1:9870:9870"
+      - "127.0.0.1:8088:8088"
+      - "127.0.0.1:18080:18080"
+      - "127.0.0.1:4040:4040"
+    volumes:
+      - ./docker:/cluster:ro
+      - ./docker/conf:/cluster-conf:ro
+      - ./:/workspace:ro
+      - master-data:/data
+  worker1:
+    <<: *node
+    hostname: worker1
+    command: [worker]
+    mem_limit: 2800m
+    volumes:
+      - ./docker:/cluster:ro
+      - ./docker/conf:/cluster-conf:ro
+      - worker1-data:/data
+  worker2:
+    <<: *node
+    hostname: worker2
+    command: [worker]
+    mem_limit: 2800m
+    volumes:
+      - ./docker:/cluster:ro
+      - ./docker/conf:/cluster-conf:ro
+      - worker2-data:/data
+networks:
+  cluster:
+volumes:
+  master-data:
+  worker1-data:
+  worker2-data:

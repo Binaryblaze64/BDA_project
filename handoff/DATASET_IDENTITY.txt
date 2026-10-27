@@ -1,0 +1,5 @@
+Dataset not bundled.
+Filename: products_500mb_plus.tsv
+Bytes: 570666925
+SHA256: e42a91c12e99781bf7f0e8d28d6511f46f98d399ea2daf967abaae981ba1cb96
+Extraction date: not provided.

@@ -1,0 +1,155 @@
+{
+  "application_id": "application_1793111996283_0003",
+  "spark_version": "3.5.9",
+  "input": "hdfs://master:9000/datasets/food/products_500mb_plus.tsv",
+  "seed": 42,
+  "raw_rows": 4535553,
+  "invalid_values_by_feature": {
+    "energy_kcal": 3935,
+    "fat": 406,
+    "saturated_fat": 166,
+    "sugars": 309,
+    "fiber": 276,
+    "proteins": 290,
+    "salt": 1042
+  },
+  "missing_code_rows": 0,
+  "deduplicated_rows": 4535493,
+  "duplicate_rows_removed": 60,
+  "clean_rows": 4529805,
+  "invalid_rows_removed": 5688,
+  "missing_before": {
+    "energy_kcal": 2298952,
+    "fat": 2322699,
+    "saturated_fat": 2405872,
+    "sugars": 2389692,
+    "fiber": 3501980,
+    "proteins": 2319006,
+    "salt": 2582159
+  },
+  "missing_after": {
+    "energy_kcal": 2298852,
+    "fat": 2322479,
+    "saturated_fat": 2405269,
+    "sugars": 2389127,
+    "fiber": 3499144,
+    "proteins": 2318749,
+    "salt": 2581270
+  },
+  "stage": "COMPLETE",
+  "elapsed_seconds": 209.4,
+  "model_rows": {
+    "eligible": 945826,
+    "train": 94557,
+    "validation": 94848,
+    "test": 189100
+  },
+  "model_class_counts": {
+    "train": [
+      {
+        "grade": "a",
+        "count": 13501
+      },
+      {
+        "grade": "b",
+        "count": 11025
+      },
+      {
+        "grade": "c",
+        "count": 21031
+      },
+      {
+        "grade": "d",
+        "count": 24261
+      },
+      {
+        "grade": "e",
+        "count": 24739
+      }
+    ],
+    "validation": [
+      {
+        "grade": "a",
+        "count": 13609
+      },
+      {
+        "grade": "b",
+        "count": 11185
+      },
+      {
+        "grade": "c",
+        "count": 20840
+      },
+      {
+        "grade": "d",
+        "count": 24247
+      },
+      {
+        "grade": "e",
+        "count": 24967
+      }
+    ],
+    "test": [
+      {
+        "grade": "a",
+        "count": 27389
+      },
+      {
+        "grade": "b",
+        "count": 22000
+      },
+      {
+        "grade": "c",
+        "count": 41476
+      },
+      {
+        "grade": "d",
+        "count": 48803
+      },
+      {
+        "grade": "e",
+        "count": 49432
+      }
+    ]
+  },
+  "training_policy": "Product-code hash: 0-9 training, 10-19 validation, 80-99 held-out test; at least 3 of 7 nutrients observed. Median imputation fitted on training only.",
+  "selected_model": "random_forest",
+  "validation_metrics": {
+    "logistic_regression": {
+      "accuracy": 0.5596955128205128,
+      "f1": 0.5248814247183209,
+      "weightedPrecision": 0.5868910455208047,
+      "weightedRecall": 0.5596955128205128
+    },
+    "random_forest": {
+      "accuracy": 0.8189946018893387,
+      "f1": 0.8183686578786222,
+      "weightedPrecision": 0.8184966434655109,
+      "weightedRecall": 0.8189946018893388
+    }
+  },
+  "test_metrics": {
+    "accuracy": 0.8207985193019567,
+    "f1": 0.8202296002844742,
+    "weightedPrecision": 0.8202949516832709,
+    "weightedRecall": 0.8207985193019567
+  },
+  "target_080_met": true,
+  "majority_baseline_test": {
+    "accuracy": 0.26140666314119515,
+    "f1": 0.10834482729692921,
+    "weightedPrecision": 0.06833344353461428,
+    "weightedRecall": 0.26140666314119515
+  },
+  "clustering_sample_rows": 17899,
+  "clustering": {
+    "selected_k": 4,
+    "silhouette_scores": {
+      "3": 0.4295669649196378,
+      "4": 0.47954444029109916,
+      "5": 0.4631064271653101
+    },
+    "distance": "squaredEuclidean",
+    "sample_policy": "2% hash sample of complete cases; standardized nutrient features"
+  }
+}

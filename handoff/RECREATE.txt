@@ -1,0 +1,38 @@
+RECREATE ON ANOTHER COMPUTER
+
+Requirements: Docker Desktop with Linux containers, roughly 8 GiB Docker RAM,
+sufficient disk space, and the separately supplied products_500mb_plus.tsv file.
+Run all commands from the extracted package root. Put the TSV in that root.
+The original Windows/Python installation is not required for Spark processing.
+
+1. Build and start:
+   docker build -t bda-project:3.4.3-spark3.5.9 -f docker/Dockerfile docker
+   docker compose up -d
+
+2. Wait for initialization; confirm two live DataNodes and two RUNNING NodeManagers:
+   docker compose exec -T master hdfs dfsadmin -report
+   docker compose exec -T master yarn node -list
+   docker compose exec -T master hdfs dfsadmin -safemode wait
+
+3. On a fresh cluster only, upload the separately supplied dataset:
+   docker compose exec -T master hdfs dfs -mkdir -p /datasets/food
+   docker compose exec -T master hdfs dfs -put /workspace/products_500mb_plus.tsv /datasets/food/
+   The put command deliberately does not overwrite an existing HDFS file.
+
+4. Verify, then run full analysis:
+   docker compose exec -T master bash /cluster/submit-verification.sh
+   docker compose exec -T master bash /cluster/run-pipeline.sh
+
+5. Export tables:
+   docker compose cp master:/data/results/. results
+
+6. Optional chart regeneration on the host:
+   python -m pip install -r requirements-report.txt
+   python src/make_charts.py
+   Report writing is your teammate's responsibility; existing PNG charts are included.
+
+History application IDs change on a fresh cluster. Do not present screenshots or
+metrics from the original run as screenshots or metrics of your new run.
+The original extract date is unknown. Record the source/extraction date if available.
+
+The fresh-computer sequence is documented but has not been tested on a second PC.

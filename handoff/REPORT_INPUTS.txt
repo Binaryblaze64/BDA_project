@@ -1,0 +1,78 @@
+REPORT INPUTS - FACTS AND COMPONENT REFERENCES
+
+Use these as source notes for your own report, not as a ready-made narrative.
+
+EXECUTION AND DATA
+YARN application: application_1793111996283_0003; saved evidence reports FINISHED / SUCCEEDED.
+Input: 4,535,553 rows, 22 columns, 570,666,925 bytes.
+Cleaned: 4,529,805; duplicates removed: 60; invalid nutrient rows: 5688.
+Source described in the synopsis: Open Food Facts. Extraction date and procedure unknown.
+The supplied extract differs from the wider database described in the synopsis.
+
+METHODS
+Raw strings -> numeric casts -> deterministic code deduplication -> invalid-row filtering.
+Gram nutrients constrained to [0,100]; energy constrained to [0,900] kcal/100g.
+Missing nutrients retained for analysis; SQL averages ignore nulls.
+Classification requires valid A-E grades and at least 3 of 7 observed features.
+Median imputation and scaling fitted only on training rows. Score and grade excluded from inputs.
+Product-code hash buckets: 0-9 train, 10-19 validation, 80-99 test. Other buckets unused for modelling.
+All cleaned rows contribute to descriptive analysis. Model sample is a resource-budget choice.
+Training / validation / test: 94,557 / 94,848 / 189,100.
+Candidates: logistic regression (maxIter=35, regParam=.05); random forest (40 trees, depth12, bins32, seed42).
+Selection uses validation weighted F1; selected model evaluated once on held-out test.
+
+MODEL RESULTS
+Validation logistic_regression: accuracy=0.559696, weighted F1=0.524881.
+Validation random_forest: accuracy=0.818995, weighted F1=0.818369.
+Selected model: random_forest; test accuracy=0.820799, weighted F1=0.820230.
+Majority baseline test accuracy=0.261407.
+Targets >0.80 met on this held-out partition; this is not a guarantee on unseen brands or future exports.
+Grade A: support 27,389, precision 0.8126, recall 0.7957, F1 0.8041.
+Grade B: support 22,000, precision 0.6725, recall 0.6155, F1 0.6427.
+Grade C: support 41,476, precision 0.7556, recall 0.8026, F1 0.7784.
+Grade D: support 48,803, precision 0.8584, recall 0.8602, F1 0.8593.
+Grade E: support 49,432, precision 0.9070, recall 0.9024, F1 0.9047.
+
+ANALYSIS FINDINGS
+Highest mean sugars: Sweets (48.356 g/100g). See corresponding CSV for counts and full top10.
+Highest mean salt: Processed meat (2.777 g/100g). See corresponding CSV for counts and full top10.
+Highest mean saturated_fat: Fats (24.038 g/100g). See corresponding CSV for counts and full top10.
+Category rankings require >=100 products and >=100 observations of the ranked nutrient.
+Country tags are exploded and deduplicated within products; totals overlap across countries.
+Product means are not sales-weighted or population dietary measures.
+
+CLUSTERING
+Complete-case 2% hash sample: 17,899 products; standardized seven-feature vectors.
+Selected k=4; silhouette=0.479544; squared Euclidean distance.
+k compared: 3,4,5; cluster count chosen on exploratory sample, not independent validation.
+Cluster 0: n=10,961; fat=5.47, sugars=4.42, protein=7.42, fiber=1.99 g/100g.
+Cluster 1: n=939; fat=10.60, sugars=6.23, protein=33.60, fiber=16.76 g/100g.
+Cluster 2: n=3,043; fat=15.02, sugars=43.78, protein=5.29, fiber=2.99 g/100g.
+Cluster 3: n=2,956; fat=40.29, sugars=8.01, protein=12.63, fiber=3.19 g/100g.
+
+LIMITATIONS TO INCLUDE
+Substantial missingness and unknown grades can introduce selection bias.
+Product-code split is not brand-disjoint or temporal; related products may span partitions.
+Feature importance is model-specific, not causal or official Nutri-Score weights.
+The model is not a complete official Nutri-Score calculation.
+All nodes run on one host: no multi-machine speedup claim.
+No repeat-seed confidence intervals or provenance audit was performed.
+
+EVIDENCE AND SOURCE MAP
+summary.json: counts, missingness, partitions, metrics and settings.
+confusion_matrix.csv and per_class_metrics.csv: held-out errors.
+top10_mean_*.csv, category_summary.csv, country_summary.csv: descriptive tables.
+cluster_profiles.csv: original-unit sample profiles.
+charts/: figures; screenshots/: actual HDFS, YARN and Spark dashboards.
+yarn_evidence.json and executor_evidence.json: success and both worker hosts.
+logs/pipeline.log: completed pipeline log.
+src/pipeline.py: exact implementation.
+compose.yaml and docker/conf/: architecture and resource settings.
+
+TEST STATUS
+Full analysis and original verification command: executed successfully.
+Live-Demo.ps1: newly created, syntax-checked only; rehearse before presenting.
+Saved-model reload now verified by a YARN error-export job and real-model dashboard API checks. The older optional CLI demo remains untested end to end.
+
+DASHBOARD ADDITION
+See DASHBOARD.txt: interactive exploration, data quality, real errors and prediction/comparison. Batch training remains on YARN; interactive inference uses local Spark with the saved HDFS models.
